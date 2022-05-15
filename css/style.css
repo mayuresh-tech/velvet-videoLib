@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 5rem;
+    background-color: #eaeaec;
+}
+
+/** Navigation bar **/
+.nav-box-bar.desktop-nav {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    padding: 1rem 5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.30rem;
+}
+
+.logo-text span {
+    color: #ff3b30;
+}
+
+#social-links-bar .no-bg.hov.btn-solid-primary {
+    height: auto;
+    width: auto;
+    background-color: #ff3b30;
+    color: white;
+    margin: 0;
+    margin-right: 1.5rem;
+}
+
+#social-links-bar .no-bg.user-icon {
+    font-size: 1.6rem;
+    height: auto;
+}
+
+#social-links-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+/** End of Navigation bar **/
+
+/** Banner section **/
+.banner-section {
+    margin: 1rem 5rem 0rem 5rem;
+    position: relative;
+}
+
+.banner-section img {
+    object-fit: cover;
+    height: 470px;
+    width: 100%;
+}
+
+.banner-intro {
+    position: relative;
+}
+
+.banner-section button {
+    background-color: #ff3b30;
+    margin: 0;
+}
+
+.layout-above {
+    position: absolute;
+    top: 70%;
+    left: 2%;
+}
+
+.layout-above p {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.layout-above button {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+/** End of Banner section **/
+
+/** Must watch section **/
+.must-watch-section {
+    margin: 0rem 5rem 2rem 5rem;
+    margin-top: 1.5rem;
+}
+
+.must-watch-section .heading-section {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/** Video card **/
+.video-card {
+    background-color: white;
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+    max-height: 70%;
+    display: inline;
+}
+
+.video-card .video-image {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.video-card .video-name {
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.7rem;
+}
+
+.video-card .video-details {
+    font-size: 1.1rem;
+    font-weight: 100;
+    padding: 0rem 0.7rem;
+}
+
+.video-card .video-watch-btn {
+    margin: 1rem 0rem 0rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: #A8A8A8;
+    color: white;
+    font-weight: 500;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: start;
+}
+/** Video card **/
+
+/** Must watch section **/
