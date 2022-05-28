@@ -52,14 +52,15 @@ body {
     align-items: center;
     align-content: center;
 }
+
 /** End of Navigation bar **/
 
 /** History section **/
-.history-section {
+.playlist-detail-section {
     margin: 0rem 5rem 2rem 5rem;
 }
 
-.history-section .side-ways {
+.playlist-detail-section .side-ways {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -67,12 +68,12 @@ body {
     margin-bottom: 1rem;
 }
 
-.history-section #clear-history-btn {
+.playlist-detail-section #delete-playlist-btn {
     margin: 1rem 0rem;
     background-color: var(--primary-videoLib-color);
 }
 
-.history-section .heading-section {
+.playlist-detail-section .heading-section {     
     font-size: 1.7rem;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
@@ -121,32 +122,32 @@ body {
 
 /** Video card **/
 
-.video-card-history {
+.video-card-playlist-detail {
     background-color: var(--color-white);
     margin: 0rem 0.6rem;
     max-height: 70%;
     display: inline;
 }
 
-.video-card-history .video-image {
+.video-card-playlist-detail .video-image {
     width: 100%;
     object-fit: cover;
     vertical-align: top;
 }
 
-.video-card-history .video-name {
+.video-card-playlist-detail .video-name {
     font-weight: 800;
     font-size: 1.1rem;
     padding: 0.5rem 0.7rem;
 }
 
-.video-card-history .video-details {
+.video-card-playlist-detail .video-details {
     font-size: 1.1rem;
     font-weight: 100;
     padding: 0rem 0.7rem;
 }
 
-.video-card-history .video-watch-btn {
+.video-card-playlist-detail .video-watch-btn {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -156,7 +157,7 @@ body {
     font-weight: 500;
 }
 
-.video-card-history .video-watch-btn:hover {
+.video-card-playlist-detail .video-watch-btn:hover {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -166,11 +167,11 @@ body {
     font-weight: 500;
 }
 
-.video-card-history .relative-box {
+.video-card-playlist-detail .relative-box {
     position: relative;
 }
 
-.video-card-history .icon {
+.video-card-playlist-detail .icon {
     cursor: pointer;
     position: absolute;
     top: 7px;
