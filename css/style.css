@@ -142,10 +142,20 @@ body {
     font-weight: 500;
 }
 
+.video-card .video-watch-btn:hover {
+    margin: 1rem 0rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: var(--primary-videoLib-color);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
 .flex-center {
     display: flex;
     justify-content: start;
 }
 /** Video card **/
 
-/** Must watch section **/
+/** End of Must watch section **/
