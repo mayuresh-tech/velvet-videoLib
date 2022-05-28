@@ -176,7 +176,9 @@ body {
     position: absolute;
     top: 7px;
     right: 9px;
-    fill: var(--color-red);
+    fill: var(--color-white);
+    stroke: #000;
+    stroke-width: 2rem;
     height: 29px;
     width: 27px;
     border: 6px solid var(--color-white);
