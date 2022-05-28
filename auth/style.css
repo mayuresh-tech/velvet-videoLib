@@ -38,7 +38,7 @@ body {
   background-color: var(--primary-videoLib-color);
   color: var(--color-white);
   margin: 0;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 
 #social-links-bar .no-bg.user-icon {
