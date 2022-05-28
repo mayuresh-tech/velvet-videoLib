@@ -172,5 +172,5 @@ body {
     width: 30px;
     border: 5.5px solid var(--color-white);
     background-color: var(--color-white);
-    border-radius: 2rem;
+    border-radius: 32px;
 }
