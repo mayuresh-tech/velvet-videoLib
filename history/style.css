@@ -69,6 +69,7 @@ body {
 }
 
 .history-section #clear-history-btn {
+    margin: 1rem 0rem;
     background-color: var(--primary-videoLib-color);
 }
 
