@@ -72,8 +72,7 @@ body {
 /** Video card **/
 .video-card {
     background-color: var(--color-white);
-    margin-right: 0.6rem;
-    margin-left: 0.6rem;
+    margin: 0rem 0.6rem;
     max-height: 70%;
     display: inline;
 }
