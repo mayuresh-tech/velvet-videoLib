@@ -6,6 +6,8 @@
 :root {
     --primary-videoLib-color: #ff3b30;
     --grey-background-card: #A8A8A8;
+    --color-red: rgb(247, 58, 58);
+    --color-black: #000;
 }
 
 body {
@@ -53,14 +55,13 @@ body {
 }
 /** End of Navigation bar **/
 
-
 /** Must watch section **/
-.must-watch-section {
-    margin: 1rem 5rem;
-    margin-top: 1.5rem;
+.watch-later-section {
+    margin: 0rem 5rem 2rem 5rem;
+    margin-top: 1rem;
 }
 
-.must-watch-section .trending-section {
+.watch-later-section .heading-section {
     margin-bottom: 1rem;
     margin-top: 4rem;
     font-size: 1.7rem;
@@ -104,7 +105,50 @@ body {
     font-weight: 500;
 }
 
-.video-card .video-watch-btn:hover {
+.flex-center {
+    display: flex;
+    justify-content: start;
+}
+/** Video card **/
+
+/** Must watch section **/
+
+.video-card-watch-later {
+    background-color: var(--color-white);
+    margin: 0rem 0.6rem;
+    max-height: 70%;
+    display: inline;
+}
+
+.video-card-watch-later .video-image {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.video-card-watch-later .video-name {
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.7rem;
+}
+
+.video-card-watch-later .video-details {
+    font-size: 1.1rem;
+    font-weight: 100;
+    padding: 0rem 0.7rem;
+}
+
+.video-card-watch-later .video-watch-btn {
+    margin: 1rem 0rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: var(--grey-background-card);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.video-card-watch-later .video-watch-btn:hover {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -114,12 +158,19 @@ body {
     font-weight: 500;
 }
 
-.flex-center {
-    display: flex;
-    justify-content: start;
+.video-card-watch-later .relative-box {
+    position: relative;
 }
-/** Video card **/
 
-.top-margin {
-    margin-top: 1.5rem;
+.video-card-watch-later .icon {
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    fill: var(--color-red);
+    height: 30px;
+    width: 30px;
+    border: 5.5px solid var(--color-white);
+    background-color: var(--color-white);
+    border-radius: 32px;
 }
