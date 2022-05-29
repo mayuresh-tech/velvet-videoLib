@@ -10,7 +10,6 @@
 }
 
 body {
-    margin-top: 5rem;
     background-color: var(--body-background-color);
 }
 
@@ -55,21 +54,78 @@ body {
 
 /** End of Navigation bar **/
 
-/** History section **/
-.playlist-detail-section {
-    margin: 0rem 5rem 2rem 5rem;
+.side-context-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
 }
 
-.playlist-detail-section .side-ways {
+.side-context-box .side-content {
+    width: 16%;
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.side-content ul {
+    margin: 0rem;
+}
+
+ul .side-ways {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+li i {
+    margin-left: 1.5rem;
+}
+
+li p {
+    margin-left: 0.7rem;
+}
+
+ul li {
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+ul li:hover {
+    cursor: pointer;
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    fill: var(--primary-videoLib-color);
+    color: var(--primary-videoLib-color);
+}
+
+.side-context-box .main-content {
+    position: absolute;
+    left: 19%;
+    width: 80%;
+    margin-right: 20%;
+}
+
+/** History section **/
+.playlist-detail-section {
+    margin-top: 4.2rem;
+}
+
+.main-content .side-ways {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin: 1rem 0rem;
 }
 
 .playlist-detail-section #delete-playlist-btn {
     margin: 1rem 0rem;
+    margin-right: 1rem;
     background-color: var(--primary-videoLib-color);
 }
 

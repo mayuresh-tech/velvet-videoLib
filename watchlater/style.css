@@ -11,7 +11,6 @@
 }
 
 body {
-    margin-top: 5rem;
     background-color: var(--body-background-color);
 }
 
@@ -53,69 +52,88 @@ body {
     align-items: center;
     align-content: center;
 }
+
 /** End of Navigation bar **/
 
-/** Must watch section **/
+.side-context-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.side-context-box .side-content {
+    width: 16%;
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.side-content ul {
+    margin: 0rem;
+}
+
+ul .side-ways {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+li i {
+    margin-left: 1.5rem;
+}
+
+li p {
+    margin-left: 0.7rem;
+}
+
+ul li {
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+ul li:hover {
+    cursor: pointer;
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    fill: var(--primary-videoLib-color);
+    color: var(--primary-videoLib-color);
+}
+
+.side-context-box .main-content {
+    position: absolute;
+    left: 19%;
+    width: 80%;
+    margin-right: 20%;
+}
+
 .watch-later-section {
-    margin: 0rem 5rem 2rem 5rem;
-    margin-top: 1rem;
+    margin-top: 4.2rem;
 }
 
 .watch-later-section .heading-section {
     margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-size: 1.7rem;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/** Video card **/
-.video-card {
-    background-color: var(--color-white);
-    margin: 0rem 0.6rem;
-    max-height: 70%;
-    display: inline;
-}
-
-.video-card .video-image {
-    width: 100%;
-    object-fit: cover;
-    vertical-align: top;
-}
-
-.video-card .video-name {
-    font-weight: 800;
-    font-size: 1.1rem;
-    padding: 0.5rem 0.7rem;
-}
-
-.video-card .video-details {
-    font-size: 1.1rem;
-    font-weight: 100;
-    padding: 0rem 0.7rem;
-}
-
-.video-card .video-watch-btn {
-    margin: 1rem 0rem 0rem;
-    width: 100%;
-    border-radius: 0;
-    font-size: 1.1rem;
-    background-color: var(--grey-background-card);
-    color: var(--color-white);
-    font-weight: 500;
-}
-
 .flex-center {
+    margin-right: 1rem;
     display: flex;
     justify-content: start;
 }
-/** Video card **/
 
 /** Must watch section **/
 
 .video-card-watch-later {
     background-color: var(--color-white);
-    margin: 0rem 0.6rem;
+    margin-right: 0.8rem;
     max-height: 70%;
     display: inline;
 }

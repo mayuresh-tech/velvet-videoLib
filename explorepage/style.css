@@ -110,26 +110,30 @@ ul li:hover {
     margin-right: 20%;
 }
 
-/** History section **/
-.history-section {
+.categories-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.categories-box .category {
+    cursor: pointer;
+    padding: 0.7rem;
+    color: var(--color-white);
+    background-color: var(--primary-videoLib-color);
+    border: 1px solid var(--primary-videoLib-color);
+    border-radius: 32px;
+    font-size: 1.1rem;
+}
+
+/** Must watch section **/
+.must-watch-section {
     margin-top: 4.2rem;
 }
 
-.main-content .side-ways {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0rem;
-}
-
-.history-section #clear-history-btn {
-    margin: 1rem 0rem;
-    margin-right: 1rem;
-    background-color: var(--primary-videoLib-color);
-}
-
-.history-section .heading-section {
+.must-watch-section .trending-section {
+    margin: 0.7rem 0rem;
     font-size: 1.7rem;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
@@ -171,49 +175,7 @@ ul li:hover {
     font-weight: 500;
 }
 
-.flex-center {
-    display: flex;
-    justify-content: start;
-}
-
-/** Video card **/
-
-.video-card-history {
-    background-color: var(--color-white);
-    margin: 0rem 0.6rem;
-    max-height: 70%;
-    display: inline;
-}
-
-.video-card-history .video-image {
-    width: 100%;
-    object-fit: cover;
-    vertical-align: top;
-}
-
-.video-card-history .video-name {
-    font-weight: 800;
-    font-size: 1.1rem;
-    padding: 0.5rem 0.7rem;
-}
-
-.video-card-history .video-details {
-    font-size: 1.1rem;
-    font-weight: 100;
-    padding: 0rem 0.7rem;
-}
-
-.video-card-history .video-watch-btn {
-    margin: 1rem 0rem 0rem;
-    width: 100%;
-    border-radius: 0;
-    font-size: 1.1rem;
-    background-color: var(--grey-background-card);
-    color: var(--color-white);
-    font-weight: 500;
-}
-
-.video-card-history .video-watch-btn:hover {
+.video-card .video-watch-btn:hover {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -223,21 +185,13 @@ ul li:hover {
     font-weight: 500;
 }
 
-.video-card-history .relative-box {
-    position: relative;
+.flex-center {
+    display: flex;
+    justify-content: start;
 }
 
-.video-card-history .icon {
-    cursor: pointer;
-    position: absolute;
-    top: 7px;
-    right: 9px;
-    fill: var(--color-white);
-    stroke: #000;
-    stroke-width: 2rem;
-    height: 29px;
-    width: 27px;
-    border: 6px solid var(--color-white);
-    background-color: var(--color-white);
-    border-radius: 2rem;
+/** Video card **/
+
+.top-margin {
+    margin-top: 1.5rem;
 }
