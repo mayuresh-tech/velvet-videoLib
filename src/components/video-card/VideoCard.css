@@ -1,0 +1,48 @@
+/** Video card **/
+.video-card {
+    background-color: var(--color-white);
+    margin: 0rem 0.6rem;
+    max-height: 70%;
+    display: inline;
+    width: 25%;
+}
+
+.video-card .video-image {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.video-card .video-name {
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.7rem;
+}
+
+.video-card .video-details {
+    font-size: 1.1rem;
+    font-weight: 100;
+    padding: 0rem 0.7rem;
+}
+
+.video-card .video-watch-btn {
+    margin: 1rem 0rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: var(--grey-background-card);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.video-card .video-watch-btn:hover {
+    margin: 1rem 0rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: var(--primary-videoLib-color);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/** Video card **/
