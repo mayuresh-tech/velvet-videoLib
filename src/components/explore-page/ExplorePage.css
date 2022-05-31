@@ -1,0 +1,23 @@
+.side-context-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.side-context-box .main-content {
+    position: absolute;
+    left: 19%;
+    width: 80%;
+    margin-right: 20%;
+}
+
+.explore-section {
+    margin-top: 4.2rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

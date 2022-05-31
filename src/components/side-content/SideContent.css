@@ -1,0 +1,42 @@
+.side-context-box .side-content {
+    width: 16%;
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.side-content ul {
+    margin: 0rem;
+}
+
+ul .side-ways {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+li i {
+    margin-left: 1.5rem;
+}
+
+li p {
+    margin-left: 0.7rem;
+}
+
+ul li {
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+ul li:hover {
+    cursor: pointer;
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    fill: var(--primary-videoLib-color);
+    color: var(--primary-videoLib-color);
+}
