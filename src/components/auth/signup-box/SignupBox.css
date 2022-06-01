@@ -21,7 +21,7 @@
     text-align: center;
 }
 
-.side-ways {
+.auth-box-signup .side-ways {
     margin-top: 1rem;
     display: flex;
     flex-flow: row wrap;

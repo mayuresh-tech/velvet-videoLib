@@ -12,6 +12,7 @@ import ExplorePage from './components/explore-page/ExplorePage';
 import LoginBox from './components/auth/login-box/LoginBox';
 import SignupBox from './components/auth/signup-box/SignupBox';
 import CreatePlaylist from './components/create-playlist/CreatePlaylist';
+import MyPlaylist from './components/my-playlist/MyPlaylist';
 
 function App() {
   // const { token } = useAuth();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<LoginBox />} />
         <Route path="/signup" element={<SignupBox />} />
         <Route path="/createplaylist" element={<CreatePlaylist />} />
+        <Route path="/myplaylist" element={<MyPlaylist />} />
       </Routes>
     </>
   );
