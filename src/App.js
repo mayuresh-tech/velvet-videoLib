@@ -11,6 +11,7 @@ import TrendingPage from './components/trending-page/TrendingPage';
 import ExplorePage from './components/explore-page/ExplorePage';
 import LoginBox from './components/auth/login-box/LoginBox';
 import SignupBox from './components/auth/signup-box/SignupBox';
+import CreatePlaylist from './components/create-playlist/CreatePlaylist';
 
 function App() {
   // const { token } = useAuth();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/explore" element={<ExplorePage />} />
         <Route path="/login" element={<LoginBox />} />
         <Route path="/signup" element={<SignupBox />} />
+        <Route path="/createplaylist" element={<CreatePlaylist />} />
       </Routes>
     </>
   );

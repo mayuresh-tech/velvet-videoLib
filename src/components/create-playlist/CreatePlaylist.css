@@ -1,0 +1,44 @@
+.create-playlist-section {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.create-box {
+    background-color: var(--color-white);
+    padding: 1rem 1.5rem 2.5rem 1.5rem;
+    height: auto;
+    width: 30%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.create-box #h4 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.create-playlist-section .side-ways {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#create-playlist-btn {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 80%;
+    background-color: var(--primary-videoLib-color);
+}
+
+input.form-input-field:focus {
+    outline: var(--primary-videoLib-color) 1px solid;
+}
