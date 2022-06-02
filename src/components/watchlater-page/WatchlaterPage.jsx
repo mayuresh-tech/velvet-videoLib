@@ -1,24 +1,19 @@
 import React from "react";
 import Heading from "../heading/Heading";
 import SideContent from "../side-content/SideContent";
-import VideoCardWithDeleteIcon from "../video-card/VideoCardWithDeleteIcon";
+import VideoCardWithHeartIcon from "../video-card/VideoCardWithHeartIcon";
 
-import "./PlaylistDetails.css";
+import "./WatchlaterPage.css";
 
-const PlaylistDetails = () => {
+const WatchlaterPage = () => {
   return (
-    <section class="playlist-detail-section">
+    <section class="watch-later-section">
       <div class="side-context-box">
         <SideContent />
         <div class="main-content">
-          <div class="side-ways">
-            <Heading heading={{ title: "Playlist #1" }} />
-            <button id="delete-playlist-btn" class="btn-solid-primary">
-              Delete this Playlist
-            </button>
-          </div>
+          <Heading heading={{ title: "Watch Later" }} />
           <div class="flex-center">
-            <VideoCardWithDeleteIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -26,7 +21,7 @@ const PlaylistDetails = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithDeleteIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -34,7 +29,7 @@ const PlaylistDetails = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithDeleteIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -42,7 +37,7 @@ const PlaylistDetails = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithDeleteIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -50,7 +45,7 @@ const PlaylistDetails = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithDeleteIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -58,7 +53,7 @@ const PlaylistDetails = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithDeleteIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -73,4 +68,4 @@ const PlaylistDetails = () => {
   );
 };
 
-export default PlaylistDetails;
+export default WatchlaterPage;

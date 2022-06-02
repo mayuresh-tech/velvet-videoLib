@@ -4,7 +4,7 @@ import "./VideoCardWithDeleteIcon.css";
 
 const VideoCardWithDeleteIcon = ({ item }) => {
   return (
-    <div class="video-card-icon">
+    <div class="video-card-delete-icon">
       <div class="relative-box">
         <div class="image">
           <img class="video-image" src={item.imagePath} />

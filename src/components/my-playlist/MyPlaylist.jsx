@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../heading/Heading";
 import MyPlaylistBox from "../my-playlist-box/MyPlaylistBox";
 import SideContent from "../side-content/SideContent";
 
@@ -11,7 +12,7 @@ const MyPlaylist = () => {
         <SideContent />
         <div class="main-content">
           <div class="side-ways">
-            <p class="heading-section">My Playlist</p>
+            <Heading heading={{ title: "My Playlist" }} />
             <button id="delete-playlist-btn" class="btn-solid-primary">
               Create new Playlist
             </button>

@@ -14,8 +14,8 @@ import SignupBox from './components/auth/signup-box/SignupBox';
 import CreatePlaylist from './components/create-playlist/CreatePlaylist';
 import MyPlaylist from './components/my-playlist/MyPlaylist';
 import PlaylistDetails from './components/playlist-details/PlaylistDetails';
-import History from './components/history-page/HistoryPage';
 import HistoryPage from './components/history-page/HistoryPage';
+import WatchlaterPage from './components/watchlater-page/WatchlaterPage';
 
 function App() {
   // const { token } = useAuth();
@@ -33,6 +33,7 @@ function App() {
         <Route path="/myplaylist" element={<MyPlaylist />} />
         <Route path="/playlistdetails" element={<PlaylistDetails />} />
         <Route path="/history" element={<HistoryPage />} />
+        <Route path="/watchlater" element={<WatchlaterPage />} />
       </Routes>
     </>
   );

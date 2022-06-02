@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../heading/Heading";
 import SideContent from "../side-content/SideContent";
 import VideoCardWithDeleteIcon from "../video-card/VideoCardWithDeleteIcon";
 
@@ -11,13 +12,13 @@ const HistoryPage = () => {
         <SideContent />
         <div class="main-content">
           <div class="side-ways">
-            <p class="heading-section">History</p>
+            <Heading heading={{ title: "History" }} />
             <button id="clear-history-btn" class="btn-solid-primary">
               Clear full history
             </button>
           </div>
           <div class="flex-center">
-          <VideoCardWithDeleteIcon
+            <VideoCardWithDeleteIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
