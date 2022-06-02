@@ -7,7 +7,7 @@ const VideoCard = ({ item }) => {
   return (
     <>
       <div class="video-card">
-        <img class="video-image" src={item.imagePath} alt="Video" />
+        <img class="video-image" src={item.imagePath} alt="Video Thumbnail" />
         <p class="video-name">{item.videoName}</p>
         <p class="video-details">
           <span class="video-views">{item.views}</span> |

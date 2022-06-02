@@ -7,7 +7,7 @@ const VideoCardWithHeartIcon = ({ item }) => {
     <div class="video-card-heart-icon">
       <div class="relative-box">
         <div class="image">
-          <img class="video-image" src={item.imagePath} />
+          <img class="video-image" src={item.imagePath} alt="Video Thumbnail" />
         </div>
         <button class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
