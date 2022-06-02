@@ -1,0 +1,36 @@
+.playlist-box {
+    background-color: var(--color-white);
+    padding: 1.2rem 1rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playlist-box .playlist-name {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.playlist-box .playlist-videos {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.playlist-box button {
+    cursor: pointer;
+    fill: var(--color-white);
+    stroke: #000;
+    stroke-width: 1.5rem;
+    height: 35px;
+    width: 35px;
+    border: 10px solid var(--body-background-color);
+    background-color: var(--color-white);
+    border-radius: 2rem;
+}

@@ -1,9 +1,7 @@
 .video-card-icon {
     background-color: var(--color-white);
-    margin: 0rem 0.6rem;
     max-height: 70%;
     display: inline;
-    width: 25%;
 }
 
 .video-card-icon .video-image {

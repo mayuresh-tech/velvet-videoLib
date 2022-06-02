@@ -49,6 +49,22 @@ const PlaylistDetails = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
+            <VideoCardWithDeleteIcon
+              item={{
+                imagePath: "./assets/video.jpg",
+                videoName: "SEN Sinatara leaks his Team",
+                views: "6K views",
+                hoursAgo: "4 hours ago",
+              }}
+            />
+            <VideoCardWithDeleteIcon
+              item={{
+                imagePath: "./assets/video.jpg",
+                videoName: "SEN Sinatara leaks his Team",
+                views: "6K views",
+                hoursAgo: "4 hours ago",
+              }}
+            />
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ const WelcomePage = () => {
               hoursAgo: "4 hours ago",
             }}
           />
-           <VideoCard
+          <VideoCard
             item={{
               imagePath: "./assets/video.jpg",
               videoName: "SEN Sinatara leaks his Team",
@@ -39,7 +39,7 @@ const WelcomePage = () => {
               hoursAgo: "4 hours ago",
             }}
           />
-           <VideoCard
+          <VideoCard
             item={{
               imagePath: "./assets/video.jpg",
               videoName: "SEN Sinatara leaks his Team",
@@ -47,7 +47,7 @@ const WelcomePage = () => {
               hoursAgo: "4 hours ago",
             }}
           />
-           <VideoCard
+          <VideoCard
             item={{
               imagePath: "./assets/video.jpg",
               videoName: "SEN Sinatara leaks his Team",

@@ -45,8 +45,6 @@ const TrendingPage = ({ item }) => {
                 hoursAgo: "4 hours ago",
               }}
             />
-          </div>
-          <div class="flex-center">
             <VideoCard
               item={{
                 imagePath: "./assets/video.jpg",
@@ -79,8 +77,6 @@ const TrendingPage = ({ item }) => {
                 hoursAgo: "4 hours ago",
               }}
             />
-          </div>
-          <div class="flex-center">
             <VideoCard
               item={{
                 imagePath: "./assets/video.jpg",
@@ -113,8 +109,6 @@ const TrendingPage = ({ item }) => {
                 hoursAgo: "4 hours ago",
               }}
             />
-          </div>
-          <div class="flex-center">
             <VideoCard
               item={{
                 imagePath: "./assets/video.jpg",
