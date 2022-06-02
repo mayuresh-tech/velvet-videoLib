@@ -41,7 +41,7 @@
     margin: 1rem 5rem 2rem 5rem;
 }
 
-.flex-center {
+.must-watch-section .flex-center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(1, 1fr);

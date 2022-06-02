@@ -10,7 +10,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.flex-center {
+.watch-later-section .flex-center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
