@@ -16,6 +16,7 @@ import MyPlaylist from './components/my-playlist/MyPlaylist';
 import PlaylistDetails from './components/playlist-details/PlaylistDetails';
 import HistoryPage from './components/history-page/HistoryPage';
 import WatchlaterPage from './components/watchlater-page/WatchlaterPage';
+import VideoDetailPage from './components/video-detail-page/VideoDetailPage';
 
 function App() {
   // const { token } = useAuth();
@@ -34,6 +35,7 @@ function App() {
         <Route path="/playlistdetails" element={<PlaylistDetails />} />
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/watchlater" element={<WatchlaterPage />} />
+        <Route path="/videodetail" element={<VideoDetailPage />} />
       </Routes>
     </>
   );

@@ -22,7 +22,7 @@
 }
 
 .login-section .side-ways {
-    margin-top: 1rem;
+    margin: 1rem 0rem 0rem 1rem;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -41,7 +41,7 @@
 
 .forgot-pass-container .btn-text-primary.no-bg {
     margin: 0;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     padding: 0;
 }
 

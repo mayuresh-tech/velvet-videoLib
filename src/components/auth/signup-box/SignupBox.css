@@ -22,7 +22,7 @@
 }
 
 .auth-box-signup .side-ways {
-    margin-top: 1rem;
+    margin: 1rem 0rem 0rem 1rem;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
