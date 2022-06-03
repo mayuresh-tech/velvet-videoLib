@@ -7,7 +7,6 @@
     --primary-videoLib-color: #ff3b30;
     --grey-background-card: #A8A8A8;
     --body-background-color: #f7f7f7;
-    --color-red: rgb(247, 58, 58);
 }
 
 body {
@@ -53,17 +52,28 @@ body {
     align-items: center;
     align-content: center;
 }
+
 /** End of Navigation bar **/
 
-/** Must watch section **/
-.watch-later-section {
+/** History section **/
+.playlist-detail-section {
     margin: 0rem 5rem 2rem 5rem;
-    margin-top: 1rem;
 }
 
-.watch-later-section .heading-section {
+.playlist-detail-section .side-ways {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 1rem;
-    margin-top: 4rem;
+}
+
+.playlist-detail-section #delete-playlist-btn {
+    margin: 1rem 0rem;
+    background-color: var(--primary-videoLib-color);
+}
+
+.playlist-detail-section .heading-section {     
     font-size: 1.7rem;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
@@ -109,36 +119,35 @@ body {
     display: flex;
     justify-content: start;
 }
+
 /** Video card **/
 
-/** Must watch section **/
-
-.video-card-watch-later {
+.video-card-playlist-detail {
     background-color: var(--color-white);
     margin: 0rem 0.6rem;
     max-height: 70%;
     display: inline;
 }
 
-.video-card-watch-later .video-image {
+.video-card-playlist-detail .video-image {
     width: 100%;
     object-fit: cover;
     vertical-align: top;
 }
 
-.video-card-watch-later .video-name {
+.video-card-playlist-detail .video-name {
     font-weight: 800;
     font-size: 1.1rem;
     padding: 0.5rem 0.7rem;
 }
 
-.video-card-watch-later .video-details {
+.video-card-playlist-detail .video-details {
     font-size: 1.1rem;
     font-weight: 100;
     padding: 0rem 0.7rem;
 }
 
-.video-card-watch-later .video-watch-btn {
+.video-card-playlist-detail .video-watch-btn {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -148,7 +157,7 @@ body {
     font-weight: 500;
 }
 
-.video-card-watch-later .video-watch-btn:hover {
+.video-card-playlist-detail .video-watch-btn:hover {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -158,19 +167,21 @@ body {
     font-weight: 500;
 }
 
-.video-card-watch-later .relative-box {
+.video-card-playlist-detail .relative-box {
     position: relative;
 }
 
-.video-card-watch-later .icon {
+.video-card-playlist-detail .icon {
     cursor: pointer;
     position: absolute;
     top: 7px;
     right: 9px;
-    fill: var(--color-red);
-    height: 30px;
-    width: 30px;
-    border: 5.5px solid var(--color-white);
+    fill: var(--color-white);
+    stroke: #000;
+    stroke-width: 2rem;
+    height: 29px;
+    width: 27px;
+    border: 6px solid var(--color-white);
     background-color: var(--color-white);
-    border-radius: 32px;
+    border-radius: 2rem;
 }

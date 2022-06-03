@@ -6,13 +6,12 @@
 :root {
     --primary-videoLib-color: #ff3b30;
     --grey-background-card: #A8A8A8;
-    --color-red: rgb(247, 58, 58);
-    --color-black: #000;
+    --body-background-color: #f7f7f7;
 }
 
 body {
     margin-top: 5rem;
-    background-color: var(--alert-secondary-bg);
+    background-color: var(--body-background-color);
 }
 
 /** Navigation bar **/
