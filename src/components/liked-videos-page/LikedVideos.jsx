@@ -1,19 +1,19 @@
 import React from "react";
 import Heading from "../heading/Heading";
 import SideContent from "../side-content/SideContent";
-import VideoCardWithWatchLaterIcon from "../video-card/VideoCardWithWatchLaterIcon";
+import VideoCardWithHeartIcon from "../video-card/VideoCardWithHeartIcon";
 
-import "./WatchlaterPage.css";
+import "./LikedVideos.css";
 
-const WatchlaterPage = () => {
+const LikedVideos = () => {
   return (
-    <section class="watch-later-section">
+    <section class="liked-videos-section">
       <div class="side-context-box">
         <SideContent />
         <div class="main-content">
-          <Heading heading={{ title: "Watch Later" }} />
+          <Heading heading={{ title: "Liked Videos" }} />
           <div class="flex-center">
-            <VideoCardWithWatchLaterIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -21,7 +21,7 @@ const WatchlaterPage = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithWatchLaterIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -29,7 +29,7 @@ const WatchlaterPage = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithWatchLaterIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -37,7 +37,7 @@ const WatchlaterPage = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithWatchLaterIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -45,7 +45,7 @@ const WatchlaterPage = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithWatchLaterIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -53,7 +53,7 @@ const WatchlaterPage = () => {
                 hoursAgo: "4 hours ago",
               }}
             />
-            <VideoCardWithWatchLaterIcon
+            <VideoCardWithHeartIcon
               item={{
                 imagePath: "./assets/video.jpg",
                 videoName: "SEN Sinatara leaks his Team",
@@ -68,4 +68,4 @@ const WatchlaterPage = () => {
   );
 };
 
-export default WatchlaterPage;
+export default LikedVideos;

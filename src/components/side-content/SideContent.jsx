@@ -20,6 +20,12 @@ const SideContent = () => {
         </li>
         <li>
           <div class="side-ways">
+            <i class="fa-solid fa-heart"></i>
+            <p>Liked</p>
+          </div>
+        </li>
+        <li>
+          <div class="side-ways">
             <i class="fa-solid fa-clock"></i>
             <p>Watch Later</p>
           </div>
