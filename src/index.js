@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
+import { AuthProvider } from "./context/AuthContext/AuthContext";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -15,7 +16,9 @@ makeServer();
 root.render(
   <StrictMode>
     <BrowserRouter>
-          <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>
 );
