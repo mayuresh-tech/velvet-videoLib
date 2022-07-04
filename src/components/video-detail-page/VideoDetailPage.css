@@ -13,7 +13,7 @@
 }
 
 .video-detail-section .must-watch-box {
-    width: 22%;
+    width: 24%;
     display: flex;
     flex-flow: column wrap;
 }
@@ -45,7 +45,7 @@
     margin-right: 4px;
 }
 
-.video-detail-section i.fa-solid.fa-heart {
+.video-detail-section i.fa-solid.fa-clock {
     font-size: 1.7rem;
     color: #000;
     margin-right: 4px;
@@ -139,4 +139,27 @@
 
 .must-watch-box .heading {
     margin-bottom: 1rem;
+}
+
+.must-watch-box {
+    margin-bottom: 2rem;
+}
+
+.must-watch-box .video-card {
+    background-color: var(--color-white);
+    max-height: 70%;
+    display: inline;
+    width: 90%;
+}
+
+.must-watch-box .video-image {
+    width: 100%;
+    vertical-align: top;
+    height: auto;
+}
+
+.must-watch-box .video-name {
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.7rem;
 }

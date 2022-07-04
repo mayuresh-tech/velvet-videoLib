@@ -1,4 +1,10 @@
-iframe {
+.video-wrapper {
     width: 93%;
-    height: 50%;
+    height: auto;
+}
+
+.react-player {
+    height: auto !important;
+    aspect-ratio: 19/9;
+    object-fit: contain;
 }

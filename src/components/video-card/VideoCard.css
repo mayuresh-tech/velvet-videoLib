@@ -1,13 +1,21 @@
 /** Video card **/
 .video-card {
+    min-width: 0;
     background-color: var(--color-white);
     max-height: 70%;
     display: inline;
 }
 
+.video-card .video-name.overflow-wrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .video-card .video-image {
+    height: 95%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     vertical-align: top;
 }
 

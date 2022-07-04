@@ -2,3 +2,8 @@ button.btn-solid-primary {
     background-color: var(--primary-videoLib-color);
     margin: 0;
 }
+
+#social-links-bar button.logout.btn-solid-primary.no-bg {
+    background-color: var(--logout-btn-background);
+    color: var(--logout-btn-color);
+}

@@ -1,17 +1,14 @@
 import React from "react";
+import ReactPlayer from "react-player";
 
 import "./VideoBox.css";
 
-const VideoBox = ({item}) => {
-    return (
-        <iframe
-            src={item.videoURL}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
-    );
+const VideoBox = ({ item }) => {
+  return (
+    <div className="video-wrapper">
+      <ReactPlayer controls className="react-player" width="100%" height="100%" url={item.videoURL} />
+    </div>
+  );
 };
 
 export default VideoBox;

@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { useData } from "../../context/DataContext/DataContext";
-import { addHistory, deleteLikedVideo } from "../../services";
+import { addHistory, deleteHistory } from "../../services";
 import PrimaryButton from "../primary-button/PrimaryButton";
 
-import "./VideoCardWithHeartIcon.css";
+import "./HistoryPageVideoCard.css";
 
-const VideoCardWithHeartIcon = ({ item }) => {
+const HistoryPageVideoCard = ({ item }) => {
   const navigate = useNavigate();
   const loginToken = localStorage.getItem("login");
   const { dispatch } = useData();
@@ -22,19 +22,19 @@ const VideoCardWithHeartIcon = ({ item }) => {
     });
   };
 
-  const removeVideoFromLikedVideos = async (videoId) => {
-    let serverResponse = await deleteLikedVideo({
+  const removeVideoFromHistory = async (videoId) => {
+    const serverResponse = await deleteHistory({
       videoId: videoId,
       encodedToken: loginToken,
     });
     dispatch({
-      type: "LOAD_LIKED",
-      payload: serverResponse.data.likes,
+      type: "LOAD_HISTORY",
+      payload: serverResponse.data.history,
     });
   };
 
   return (
-    <div className="video-card-heart-icon" key={item._id}>
+    <div className="video-card-delete-icon" key={item._id}>
       <div className="relative-box">
         <div className="image">
           <img
@@ -45,12 +45,12 @@ const VideoCardWithHeartIcon = ({ item }) => {
         </div>
         <button
           onClick={() => {
-            removeVideoFromLikedVideos(item.id);
+            removeVideoFromHistory(item.id);
           }}
           className="icon"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z" />
           </svg>
         </button>
       </div>
@@ -74,4 +74,4 @@ const VideoCardWithHeartIcon = ({ item }) => {
   );
 };
 
-export default VideoCardWithHeartIcon;
+export default HistoryPageVideoCard;

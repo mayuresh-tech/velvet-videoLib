@@ -1,36 +1,36 @@
-.video-card-heart-icon {
+.video-card-delete-icon {
     min-width: 0;
     background-color: var(--color-white);
     max-height: 70%;
     display: inline;
 }
 
-.video-card-heart-icon .video-image {
+.video-card-delete-icon .video-image {
     height: 95%;
     width: 100%;
     object-fit: fill;
     vertical-align: top;
 }
 
-.video-card-heart-icon .video-name.overflow-wrap {
+.video-card-delete-icon .video-name.overflow-wrap {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.video-card-heart-icon .video-name {
+.video-card-delete-icon .video-name {
     font-weight: 800;
     font-size: 1.1rem;
     padding: 0.5rem 0.7rem;
 }
 
-.video-card-heart-icon .video-details {
+.video-card-delete-icon .video-details {
     font-size: 1.1rem;
     font-weight: 100;
     padding: 0rem 0.7rem;
 }
 
-.video-card-heart-icon .video-watch-btn {
+.video-card-delete-icon .video-watch-btn {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -40,7 +40,7 @@
     font-weight: 500;
 }
 
-.video-card-heart-icon .video-watch-btn:hover {
+.video-card-delete-icon .video-watch-btn:hover {
     margin: 1rem 0rem 0rem;
     width: 100%;
     border-radius: 0;
@@ -50,19 +50,21 @@
     font-weight: 500;
 }
 
-.video-card-heart-icon .relative-box {
+.video-card-delete-icon .relative-box {
     position: relative;
 }
 
-.video-card-heart-icon .icon {
+.video-card-delete-icon .icon {
     cursor: pointer;
     position: absolute;
     top: 7px;
     right: 9px;
-    fill: var(--color-red);
-    height: 30px;
-    width: 30px;
-    border: 5.5px solid var(--color-white);
+    fill: var(--color-white);
+    stroke: #000;
+    stroke-width: 2rem;
+    height: 29px;
+    width: 27px;
+    border: 6px solid var(--color-white);
     background-color: var(--color-white);
     border-radius: 2rem;
 }

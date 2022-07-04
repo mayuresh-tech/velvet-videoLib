@@ -1,4 +1,5 @@
 .side-context-box .side-content {
+    cursor: pointer;
     width: 16%;
     position: fixed;
     height: 100vh;

@@ -1,38 +1,28 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router";
+import React from "react";
 import { useData } from "../../context/DataContext/DataContext";
-import CategoriesBox from "../categories-box/CategoriesBox";
 import Heading from "../heading/Heading";
 import SideContent from "../side-content/SideContent";
-import VideoCard from "../video-card/VideoCard";
+import VideoCardWithHeartIcon from "../video-card/VideoCardWithHeartIcon";
 
-import "./ExplorePage.css";
+import "./LikedVideos.css";
 
-const ExplorePage = ({ item }) => {
-  const { filtered } = useData();
-
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
+const LikedVideos = () => {
+  const { data } = useData();
   return (
-    <section className="explore-section">
+    <section className="liked-videos-section">
       <div className="side-context-box">
         <SideContent />
         <div className="main-content">
-          <Heading heading={{ title: "All Videos" }} />
-          <CategoriesBox />
+          <Heading heading={{ title: "Liked Videos" }} />
           <div className="flex-center">
-            {filtered.map((video) => {
+            {data.liked.map((video) => {
               return (
-                <VideoCard
+                <VideoCardWithHeartIcon
                   key={video._id}
                   item={{
                     _id: video._id,
                     id: video._id,
-                    videoName: video.title,
+                    videoName: video.videoName,
                     description: video.description,
                     creator: video.creator,
                     link: video.link,
@@ -51,4 +41,4 @@ const ExplorePage = ({ item }) => {
   );
 };
 
-export default ExplorePage;
+export default LikedVideos;

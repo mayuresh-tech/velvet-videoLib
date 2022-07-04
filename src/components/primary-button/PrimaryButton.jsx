@@ -4,9 +4,14 @@ import "./PrimaryButton.css";
 
 const PrimaryButton = ({ item }) => {
   return (
-    <>
-      <button class={item.class}>{item.buttonName}</button>
-    </>
+    <button key={item.id}
+      onClick={() => {
+        item.logicFunction();
+      }}
+      className={item.class}
+    >
+      {item.buttonName}
+    </button>
   );
 };
 

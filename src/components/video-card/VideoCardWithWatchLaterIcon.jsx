@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { useData } from "../../context/DataContext/DataContext";
-import { addHistory, deleteLikedVideo } from "../../services";
+import { addHistory, deleteWatchLater } from "../../services";
 import PrimaryButton from "../primary-button/PrimaryButton";
 
-import "./VideoCardWithHeartIcon.css";
+import "./VideoCardWithWatchLaterIcon.css";
 
-const VideoCardWithHeartIcon = ({ item }) => {
+const VideoCardWithWatchLaterIcon = ({ item }) => {
   const navigate = useNavigate();
   const loginToken = localStorage.getItem("login");
   const { dispatch } = useData();
@@ -22,19 +22,19 @@ const VideoCardWithHeartIcon = ({ item }) => {
     });
   };
 
-  const removeVideoFromLikedVideos = async (videoId) => {
-    let serverResponse = await deleteLikedVideo({
+  const removeVideoFromWatchLater = async (videoId) => {
+    let serverResponse = await deleteWatchLater({
       videoId: videoId,
       encodedToken: loginToken,
     });
     dispatch({
-      type: "LOAD_LIKED",
-      payload: serverResponse.data.likes,
+      type: "LOAD_WATCHLATER",
+      payload: serverResponse.data.watchlater,
     });
   };
 
   return (
-    <div className="video-card-heart-icon" key={item._id}>
+    <div className="video-card-watch-later-icon">
       <div className="relative-box">
         <div className="image">
           <img
@@ -45,12 +45,12 @@ const VideoCardWithHeartIcon = ({ item }) => {
         </div>
         <button
           onClick={() => {
-            removeVideoFromLikedVideos(item.id);
+            removeVideoFromWatchLater(item.id);
           }}
           className="icon"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z" />
+            <path d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z" />
           </svg>
         </button>
       </div>
@@ -74,4 +74,4 @@ const VideoCardWithHeartIcon = ({ item }) => {
   );
 };
 
-export default VideoCardWithHeartIcon;
+export default VideoCardWithWatchLaterIcon;

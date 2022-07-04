@@ -97,11 +97,11 @@ export const getPlaylists = async ({ encodedToken }) =>
     },
   });
 
-export const addPlaylist = async ({ title, encodedToken }) =>
+export const addPlaylist = async ({ title, description, encodedToken }) =>
   await axios.post(
     "/api/user/playlists",
     {
-      playlist: { title: title, description: "sample list" },
+      playlist: { title: title, description: description },
     },
     {
       headers: {

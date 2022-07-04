@@ -1,27 +1,64 @@
 import React from "react";
+import { useNavigate } from "react-router";
+import { useAuth } from "../../context/AuthContext/AuthContext";
+import { useData } from "../../context/DataContext/DataContext";
 import PrimaryButton from "../primary-button/PrimaryButton";
 
 import "./Navbar.css";
 
 const Navbar = () => {
+  const { token, setToken } = useAuth();
+  const { dispatch } = useData();
+  const navigate = useNavigate();
+
+  const doLogout = async () => {
+    localStorage.removeItem("login");
+    localStorage.removeItem("user");
+    localStorage.removeItem("liked");
+    localStorage.removeItem("watchlater");
+    localStorage.removeItem("history");
+    localStorage.removeItem("playlist");
+    dispatch({
+      type: "LOGOUT",
+    });
+    setToken(false);
+    navigate("/");
+  };
+
   return (
-    <nav class="nav-box-bar desktop-nav">
+    <nav className="nav-box-bar desktop-nav">
       <div id="nav-section-bar">
-        <div id="logo-bar">
-          <p class="logo-text">
+        <div onClick={() => navigate("/")} id="logo-bar">
+          <p className="logo-text">
             <span>Velvet</span> Videos
           </p>
         </div>
       </div>
 
-      <div class="login-nav-box">
+      <div className="login-nav-box">
         <div id="social-links-bar">
-          <button class="no-bg hov user-icon">
-            <i class="fa-solid fa-user"></i>
+          <button className="no-bg hov user-icon">
+            <i className="fa-solid fa-user"></i>
           </button>
-          <PrimaryButton
-            item={{ buttonName: "Login", class: "no-bg hov btn-solid-primary" }}
-          />
+          {token ? (
+            <PrimaryButton
+              item={{
+                logicFunction: doLogout,
+                buttonName: "Logout",
+                class: "no-bg hov logout btn-solid-primary",
+              }}
+            />
+          ) : (
+            <PrimaryButton
+              item={{
+                logicFunction: () => {
+                  navigate("/login");
+                },
+                buttonName: "Login",
+                class: "no-bg hov btn-solid-primary",
+              }}
+            />
+          )}
         </div>
       </div>
     </nav>

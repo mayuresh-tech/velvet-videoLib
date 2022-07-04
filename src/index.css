@@ -8,6 +8,8 @@
     --grey-background-card: #A8A8A8;
     --body-background-color: #f7f7f7;
     --color-red: rgb(247, 58, 58);
+    --logout-btn-background: #d8d8d8;
+    --logout-btn-color: #3f4049;
   }
   
   body {

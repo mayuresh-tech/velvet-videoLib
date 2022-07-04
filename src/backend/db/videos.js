@@ -16,6 +16,7 @@ export const videos = [
     since: "Jan 10 2022",
     views: "6,627,895 views",
     category: "family",
+    imagePath: "./assets/tarak_1.jpg",
   },
   {
     _id: uuid(),
@@ -27,6 +28,7 @@ export const videos = [
     since: "May 9, 2022",
     views: "1,817,973 views",
     category: "family",
+    imagePath: "./assets/tarak_2.jpg",
   },
   {
     _id: uuid(),
@@ -38,6 +40,7 @@ export const videos = [
     since: "Mar 20, 2022",
     views: "9,008,553 views",
     category: "games",
+    imagePath: "./assets/fortnite.jpg",
   },
   {
     _id: uuid(),
@@ -49,6 +52,7 @@ export const videos = [
     since: "May 20, 2022",
     views: "1,446,960 views",
     category: "comedy",
+    imagePath: "./assets/comedy_1.jpg",
   },
   {
     _id: uuid(),
@@ -60,6 +64,7 @@ export const videos = [
     since: "Jan 17, 2020",
     views: "7,363,198 views",
     category: "comedy",
+    imagePath: "./assets/comedy_2.jpg",
   },
   {
     _id: uuid(),
@@ -71,6 +76,7 @@ export const videos = [
     since: "May 8, 2019",
     views: "48,532,701 views",
     category: "comedy",
+    imagePath: "./assets/comedy_3.jpg",
   },
   {
     _id: uuid(),
@@ -82,6 +88,7 @@ export const videos = [
     since: "Mar 20, 2017",
     views: "10,929,618 views",
     category: "comedy",
+    imagePath: "./assets/comedy_4.jpg",
   },
   {
     _id: uuid(),
@@ -93,6 +100,7 @@ export const videos = [
     since: "Jan 2, 2022",
     views: "4,580,565 views",
     category: "comedy",
+    imagePath: "./assets/comedy_5.jpg",
   },
   {
     _id: uuid(),
@@ -104,6 +112,7 @@ export const videos = [
     since: "May 2, 2022",
     views: "3,173,642 views",
     category: "games",
+    imagePath: "./assets/apex.jpg",
   },
   {
     _id: uuid(),
@@ -115,6 +124,7 @@ export const videos = [
     since: "Sep 12, 2021",
     views: "1,457,753 views",
     category: "motivational",
+    imagePath: "./assets/kobe.jpg",
   },
   {
     _id: uuid(),
@@ -126,5 +136,6 @@ export const videos = [
     since: "Oct 21, 2020",
     views: "19,627,162 views",
     category: "motivational",
+    imagePath: "./assets/steve.jpg",
   },
 ];
