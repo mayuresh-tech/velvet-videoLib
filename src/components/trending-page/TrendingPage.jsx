@@ -11,7 +11,7 @@ const TrendingPage = ({ item }) => {
 
   let trendingVideosArr = data.videos
     .sort(() => Math.random() - Math.random())
-    .slice(0, Math.floor(Math.random() * 10 + 2));
+    .slice(2, Math.floor(Math.random() * 10 + 2));
 
   return (
     <section className="trending-section">
