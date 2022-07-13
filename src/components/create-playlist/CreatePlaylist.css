@@ -42,3 +42,7 @@
 input.form-input-field:focus {
     outline: var(--primary-videoLib-color) 1px solid;
 }
+
+.create-playlist-section .validation-errors {
+    margin-top: 1rem;
+}

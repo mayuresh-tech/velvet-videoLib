@@ -185,17 +185,84 @@
     color: var(--alert-danger-text);
     background-color: var(--alert-danger-bg);
     fill: var(--alert-danger-text);
+    z-index: 999;
 }
 
 .toast-box.toast-error {
     position: fixed;
-    top: 12%;
-    right: 5%;
-    width: auto;
-    padding: 1rem 1rem;
+    top: 0%;
+    right: 40%;
+    width: 20%;
     display: flex;
-    margin: 0.8rem;
     border-radius: 0.4rem;
     font-weight: 400;
     justify-content: space-between;
+}
+
+.toast-success {
+    color: var(--alert-success-text);
+    background-color: var(--alert-success-bg);
+    fill: var(--alert-success-text);
+    z-index: 999;
+}
+
+.toast-box.toast-success {
+    position: fixed;
+    top: 0%;
+    right: 40%;
+    width: 20%;
+    display: flex;
+    border-radius: 0.4rem;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+.toast-box.toast-warning {
+    position: fixed;
+    top: 0%;
+    right: 40%;
+    width: 20%;
+    display: flex;
+    border-radius: 0.4rem;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+.modal-container {
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(240, 248, 255, 0.58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.modal-container .modal-description {
+    margin-top: 0;
+}
+
+.modal-container .modal-info {
+    margin: 1.5rem 0rem;
+}
+
+.modal-info.modal-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 1.5rem 0rem;
+}
+
+.modal-info.modal-flex .modal-title {
+    margin-top: 0.3rem;
+    margin-right: 2rem;
+}
+
+.modal-content hr {
+    width: 100%;
 }

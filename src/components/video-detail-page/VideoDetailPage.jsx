@@ -16,9 +16,27 @@ const VideoDetailPage = () => {
 
   const [loginError, setLoginError] = useState(false);
 
+  const [likedSuccessMsg, setLikedSuccessMsg] = useState(false);
+  const [likedSuccessMsgError, setLikedSuccessMsgError] = useState(false);
+
+  const [watchLaterSuccessMsg, setWatchLaterSuccessMsg] = useState(false);
+  const [watchLaterSuccessMsgError, setWatchLaterSuccessMsgError] =
+    useState(false);
+
+  const [playlistsModalToggle, setPlaylistsModalToggle] = useState(false);
+
+  const [addVideoToPlaylistSuccessMsg, setAddVideoToPlaylistSuccessMsg] =
+    useState(false);
+  const [addVideoToPlaylistErrorMsg, setAddVideoToPlaylistErrorMsg] =
+    useState(false);
+
+  function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
   let mustWatchDisplay = data.videos
     .sort(() => Math.random() - Math.random())
-    .slice(2, Math.floor(Math.random() * 10));
+    .slice(0, randomNumber(2, 9));
 
   const addVideoToLiked = async (video) => {
     if ("login" in localStorage) {
@@ -28,11 +46,15 @@ const VideoDetailPage = () => {
           video: video,
           encodedToken: loginToken,
         });
-        dispatch({
-          type: "LOAD_LIKED",
-          payload: serverResponse.data.likes,
-        });
+        if (serverResponse.status === 200 || serverResponse.status === 201) {
+          dispatch({
+            type: "LOAD_LIKED",
+            payload: serverResponse.data.likes,
+          });
+          setLikedSuccessMsg(true);
+        }
       } catch (e) {
+        setLikedSuccessMsgError(true);
         console.log(e);
       }
     } else {
@@ -48,11 +70,15 @@ const VideoDetailPage = () => {
           video: video,
           encodedToken: loginToken,
         });
-        dispatch({
-          type: "LOAD_WATCHLATER",
-          payload: serverResponse.data.watchlater,
-        });
+        if (serverResponse.status === 200 || serverResponse.status === 201) {
+          dispatch({
+            type: "LOAD_WATCHLATER",
+            payload: serverResponse.data.watchlater,
+          });
+          setWatchLaterSuccessMsg(true);
+        }
       } catch (e) {
+        setWatchLaterSuccessMsgError(true);
         console.log(e);
       }
     } else {
@@ -69,21 +95,122 @@ const VideoDetailPage = () => {
           playlistId: playlistId,
           encodedToken: loginToken,
         });
-        let storagePlaylists = JSON.parse(localStorage.getItem("playlist"));
-        storagePlaylists = storagePlaylists.filter(
-          (item) => item._id !== playlistId
-        );
-        storagePlaylists.push(serverResponse.data.playlist);
-        dispatch({
-          type: "LOAD_PLAYLIST",
-          payload: storagePlaylists,
-        });
+        if (serverResponse.status === 201) {
+          let storagePlaylists = JSON.parse(localStorage.getItem("playlist"));
+          storagePlaylists = storagePlaylists.filter(
+            (item) => item._id !== playlistId
+          );
+          storagePlaylists.push(serverResponse.data.playlist);
+          dispatch({
+            type: "LOAD_PLAYLIST",
+            payload: storagePlaylists,
+          });
+          setAddVideoToPlaylistSuccessMsg(true);
+        }
       } catch (e) {
+        setAddVideoToPlaylistErrorMsg(true);
         console.log(e);
       }
     } else {
       setLoginError(true);
     }
+  };
+
+  const showModalForPlaylists = () => {
+    return (
+      <div className="modal-container">
+        <div class="modal-box">
+          <div class="modal-content">
+            <hr />
+            <div class="modal-heading">Playlists</div>
+            <hr />
+            <div class="modal-description">
+              {data.playlist.length === 0 ? (
+                <div className="modal-info">No playlists found!</div>
+              ) : (
+                data.playlist.map((item) => {
+                  return (
+                    <div className="modal-info modal-flex">
+                      <div className="modal-title">{item.title}</div>
+                      <button
+                        onClick={() => {
+                          addVideoToPlaylist(state, item._id);
+                        }}
+                        className="btn-solid-primary"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+            <div class="modal-buttons">
+              <button
+                onClick={() => {
+                  setPlaylistsModalToggle(false);
+                }}
+                class="btn-solid-primary"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const callWatchLaterSuccessFunc = () => {
+    return (
+      <div className="toast-box toast-success">
+        <p>Added to Watch Later!</p>
+        <button className="no-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </button>
+      </div>
+    );
+  };
+
+  const callWatchLaterErrorFunc = () => {
+    return (
+      <div className="toast-box toast-warning">
+        <p>Already in Watch Later!</p>
+        <button className="no-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </button>
+      </div>
+    );
+  };
+
+  const callLikedErrorFunc = () => {
+    return (
+      <div className="toast-box toast-warning">
+        <p>Already in Liked Videos!</p>
+        <button className="no-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </button>
+      </div>
+    );
+  };
+
+  const callLikedSuccessFunc = () => {
+    return (
+      <div className="toast-box toast-success">
+        <p>Added to Liked Videos!</p>
+        <button className="no-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </button>
+      </div>
+    );
   };
 
   const callLoginErrorFunc = () => {
@@ -99,15 +226,69 @@ const VideoDetailPage = () => {
     );
   };
 
+  const callAddToPlaylistSuccessFunc = () => {
+    return (
+      <div className="toast-box toast-success">
+        <p>Added Video to Playlist!</p>
+        <button className="no-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </button>
+      </div>
+    );
+  };
+
+  const callAddToPlaylistErrorFunc = () => {
+    return (
+      <div className="toast-box toast-error">
+        <p>Already Video in Playlist!</p>
+        <button className="no-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+          </svg>
+        </button>
+      </div>
+    );
+  };
+
   const state = location.state;
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => setLoginError(false), 5000);
-  }, [loginError]);
+
+    setTimeout(() => setLikedSuccessMsg(false), 5000);
+    setTimeout(() => setLikedSuccessMsgError(false), 5000);
+
+    setTimeout(() => setWatchLaterSuccessMsg(false), 5000);
+    setTimeout(() => setWatchLaterSuccessMsgError(false), 5000);
+
+    setTimeout(() => setAddVideoToPlaylistSuccessMsg(false), 5000);
+    setTimeout(() => setAddVideoToPlaylistErrorMsg(false), 5000);
+  }, [
+    loginError,
+    likedSuccessMsg,
+    likedSuccessMsgError,
+    watchLaterSuccessMsg,
+    watchLaterSuccessMsgError,
+    addVideoToPlaylistSuccessMsg,
+    addVideoToPlaylistErrorMsg,
+  ]);
 
   return (
     <>
+      {playlistsModalToggle ? showModalForPlaylists() : null}
+
+      {likedSuccessMsg ? callLikedSuccessFunc() : null}
+      {likedSuccessMsgError ? callLikedErrorFunc() : null}
+
+      {watchLaterSuccessMsg ? callWatchLaterSuccessFunc() : null}
+      {watchLaterSuccessMsgError ? callWatchLaterErrorFunc() : null}
+
+      {addVideoToPlaylistSuccessMsg ? callAddToPlaylistSuccessFunc() : null}
+      {addVideoToPlaylistErrorMsg ? callAddToPlaylistErrorFunc() : null}
+
       {loginError ? callLoginErrorFunc() : null}
       <section className="video-detail-section">
         <div className="main-box">
@@ -146,6 +327,7 @@ const VideoDetailPage = () => {
                 <button
                   className="no-bg"
                   onClick={() => {
+                    setPlaylistsModalToggle(true);
                     //addVideoToPlaylist(state, "404327b6-0cf0-488a-81fb-a9d3cc30064b");
                   }}
                 >

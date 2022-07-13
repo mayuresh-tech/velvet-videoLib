@@ -24,7 +24,7 @@ const PlaylistDetailsPageVideoCard = ({ item }) => {
 
   const deleteVideoFromPlaylist = async (video, playlistId) => {
     let serverResponse = await deletePlaylistVideo({
-      videoId: video._id,
+      videoId: video,
       playlistId: playlistId,
       encodedToken: loginToken,
     });

@@ -128,7 +128,10 @@ const DataProvider = ({ children }) => {
           );
           playlistLocalStorage &&
             playlistLocalStorage.map(async (item) => {
-              await addPlaylist({ title: item.title, encodedToken: token });
+              await addPlaylist({
+                title: item.title,
+                encodedToken: token,
+              });
               item?.videos?.map(async (video) => {
                 await addPlaylistVideo({
                   video: video,
