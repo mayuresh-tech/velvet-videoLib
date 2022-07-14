@@ -10,7 +10,6 @@
 }
 
 body {
-    margin-top: 5rem;
     background-color: var(--body-background-color);
 }
 
@@ -52,18 +51,73 @@ body {
     align-items: center;
     align-content: center;
 }
+
 /** End of Navigation bar **/
 
+.side-context-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.side-context-box .side-content {
+    width: 16%;
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.side-content ul {
+    margin: 0rem;
+}
+
+ul .side-ways {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+li i {
+    margin-left: 1.5rem;
+}
+
+li p {
+    margin-left: 0.7rem;
+}
+
+ul li {
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+ul li:hover {
+    cursor: pointer;
+    padding: 0.7rem 0.7rem;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    fill: var(--primary-videoLib-color);
+    color: var(--primary-videoLib-color);
+}
+
+.side-context-box .main-content {
+    position: absolute;
+    left: 19%;
+    width: 80%;
+    margin-right: 20%;
+}
 
 /** Must watch section **/
 .must-watch-section {
-    margin: 1rem 5rem;
-    margin-top: 1.5rem;
+    margin-top: 4.2rem;
 }
 
 .must-watch-section .trending-section {
     margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-size: 1.7rem;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
@@ -119,6 +173,7 @@ body {
     display: flex;
     justify-content: start;
 }
+
 /** Video card **/
 
 .top-margin {
