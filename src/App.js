@@ -5,7 +5,8 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Mockman from 'mockman-js';
 
-import { Navbar } from "./components/navbar/Navbar";
+import WelcomePage from './components/welcome-page/WelcomePage';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   // const { token } = useAuth();
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<WelcomePage />} />
+        <Route path="/mockman" element={<Mockman />} />
       </Routes>
     </>
   );

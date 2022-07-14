@@ -1,0 +1,40 @@
+/** Navigation bar **/
+.nav-box-bar.desktop-nav {
+    position: fixed;
+    top: 0;
+    background-color: var(--color-white);
+    padding: 1rem 5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-text span {
+    color: var(--primary-videoLib-color);
+}
+
+#social-links-bar .no-bg.hov.btn-solid-primary {
+    height: auto;
+    width: auto;
+    background-color: var(--primary-videoLib-color);
+    color: var(--color-white);
+    margin: 0;
+    margin-right: 1rem;
+}
+
+#social-links-bar .no-bg.user-icon {
+    font-size: 1.6rem;
+    height: auto;
+}
+
+#social-links-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/** End of Navigation bar **/
