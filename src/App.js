@@ -9,6 +9,8 @@ import WelcomePage from './components/welcome-page/WelcomePage';
 import Navbar from './components/navbar/Navbar';
 import TrendingPage from './components/trending-page/TrendingPage';
 import ExplorePage from './components/explore-page/ExplorePage';
+import LoginBox from './components/auth/login-box/LoginBox';
+import SignupBox from './components/auth/signup-box/SignupBox';
 
 function App() {
   // const { token } = useAuth();
@@ -20,6 +22,8 @@ function App() {
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/trending" element={<TrendingPage />} />
         <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/login" element={<LoginBox />} />
+        <Route path="/signup" element={<SignupBox />} />
       </Routes>
     </>
   );
