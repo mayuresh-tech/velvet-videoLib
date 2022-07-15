@@ -1,0 +1,4 @@
+button.btn-solid-primary {
+    background-color: var(--primary-videoLib-color);
+    margin: 0;
+}

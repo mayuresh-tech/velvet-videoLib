@@ -1,4 +1,7 @@
 import React from "react";
+import Heading from "../heading/Heading";
+import PrimaryButton from "../primary-button/PrimaryButton";
+import VideoCard from "../video-card/VideoCard";
 
 import "./WelcomePage.css";
 
@@ -11,57 +14,47 @@ const WelcomePage = () => {
         </div>
         <div class="layout-above">
           <p>Experience the Himalayas!</p>
-          <button class="btn-solid-primary">Explore</button>
+          <PrimaryButton
+            item={{ buttonName: "Explore", class: "btn-solid-primary" }}
+          />
         </div>
       </section>
 
       <section class="must-watch-section">
-        <p class="heading-section">Must Watch Videos</p>
+        {<Heading heading={{ title: "Must Watch Videos" }} />}
         <div class="flex-center">
-          <div class="video-card">
-            <img class="video-image" src="./assets/video.jpg" alt="Video" />
-            <p class="video-name">SEN Sinatara leaks his Team</p>
-            <p class="video-details">
-              <span class="video-views">6K views</span> |{" "}
-              <span class="video-hours-ago">4 hours ago</span>
-            </p>
-            <button class="btn-solid-secondary video-watch-btn">
-              Watch now
-            </button>
-          </div>
-          <div class="video-card">
-            <img class="video-image" src="./assets/video.jpg" alt="Video" />
-            <p class="video-name">SEN Sinatara leaks his Team</p>
-            <p class="video-details">
-              <span class="video-views">6K views</span> |{" "}
-              <span class="video-hours-ago">4 hours ago</span>
-            </p>
-            <button class="btn-solid-secondary video-watch-btn">
-              Watch now
-            </button>
-          </div>
-          <div class="video-card">
-            <img class="video-image" src="./assets/video.jpg" alt="Video" />
-            <p class="video-name">SEN Sinatara leaks his Team</p>
-            <p class="video-details">
-              <span class="video-views">6K views</span> |{" "}
-              <span class="video-hours-ago">4 hours ago</span>
-            </p>
-            <button class="btn-solid-secondary video-watch-btn">
-              Watch now
-            </button>
-          </div>
-          <div class="video-card">
-            <img class="video-image" src="./assets/video.jpg" alt="Video" />
-            <p class="video-name">SEN Sinatara leaks his Team</p>
-            <p class="video-details">
-              <span class="video-views">6K views</span> |{" "}
-              <span class="video-hours-ago">4 hours ago</span>
-            </p>
-            <button class="btn-solid-secondary video-watch-btn">
-              Watch now
-            </button>
-          </div>
+          <VideoCard
+            item={{
+              imagePath: "./assets/video.jpg",
+              videoName: "SEN Sinatara leaks his Team",
+              views: "6K views",
+              hoursAgo: "4 hours ago",
+            }}
+          />
+           <VideoCard
+            item={{
+              imagePath: "./assets/video.jpg",
+              videoName: "SEN Sinatara leaks his Team",
+              views: "6K views",
+              hoursAgo: "4 hours ago",
+            }}
+          />
+           <VideoCard
+            item={{
+              imagePath: "./assets/video.jpg",
+              videoName: "SEN Sinatara leaks his Team",
+              views: "6K views",
+              hoursAgo: "4 hours ago",
+            }}
+          />
+           <VideoCard
+            item={{
+              imagePath: "./assets/video.jpg",
+              videoName: "SEN Sinatara leaks his Team",
+              views: "6K views",
+              hoursAgo: "4 hours ago",
+            }}
+          />
         </div>
       </section>
     </>

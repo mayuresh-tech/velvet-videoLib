@@ -1,4 +1,5 @@
 import React from "react";
+import PrimaryButton from "../primary-button/PrimaryButton";
 
 import "./Navbar.css";
 
@@ -18,7 +19,9 @@ const Navbar = () => {
           <button class="no-bg hov user-icon">
             <i class="fa-solid fa-user"></i>
           </button>
-          <button class="no-bg hov btn-solid-primary">Login</button>
+          <PrimaryButton
+            item={{ buttonName: "Login", class: "no-bg hov btn-solid-primary" }}
+          />
         </div>
       </div>
     </nav>
